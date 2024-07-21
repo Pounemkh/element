@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      li{
+        display: inline;
+        margin: 10px;
+     
+      }
+    </style>
+</head>
+<body>
+    <div id="myDIV" style="padding:16px;background-color:lightgray;">
+     
+        </div>
+    <script >
+        
+const menuItems = [
+  { text: 'صفحه اصلی', link: '/' },
+
+  { text: 'درباره ما', link: '/about' },
+  { text: 'خدمات', link: '/services' },
+  { text: 'تماس با ما', link: '/contact' }
+];
+const menu = document.createElement('ul');
+menuItems.forEach(item => {
+  const menuItem = document.createElement('li');
+  const link = document.createElement('a');
+  link.href = item.link;
+  link.textContent = item.text;
+  menuItem.appendChild(link);
+  menu.appendChild(menuItem);
+});
+
+document.body.appendChild(menu);
+    
+ 
+      document.getElementById("myDIV").appendChild(menu);
+    </script>
+</body>
+</html>
